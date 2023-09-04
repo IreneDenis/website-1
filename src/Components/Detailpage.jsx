@@ -17,7 +17,7 @@ const Detailpage = () => {
 
   useEffect(() => {
     getData();
-  },[]);
+  },);
 
   const getData = async () => {
     try {
