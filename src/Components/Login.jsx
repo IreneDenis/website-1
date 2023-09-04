@@ -6,11 +6,11 @@ import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
 import { useState } from "react";
 import { Button } from "primereact/button";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [value, setValue] = useState("");
-  const navigate = useNavigate
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col h-screen w-full bg-slate-500 items-center justify-center">
       <div className="flex flex-row bg-slate-950 h-4/6 w-4/6 ">
@@ -23,14 +23,12 @@ const Login = () => {
             <h2 className="flex font-bold text-center">SHOPPING CENTRE</h2>
           </div>
           <div className="flex h-24 w-full flex-col justify-center items-center">
-           
             <span className="p-float-label mt-2">
               <InputText className="w-60" id="username" />
               <label htmlFor="username">Username or email</label>
             </span>
           </div>
           <div className="flex justify-center w-full h-20 flex-col  mt-1 items-center ">
-            
             <Password
               className="w-60 "
               value={value}
@@ -39,7 +37,7 @@ const Login = () => {
             />
           </div>
           <div className="flex mt-4 w-full h-14 items-center justify-center ">
-            <Button label="Sign in" onClick={() => navigate("/Homepage")} />
+            <Button label="Sign in" onClick={() => navigate("/Firstpage")} />
           </div>
         </div>
       </div>
