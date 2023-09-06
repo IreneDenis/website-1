@@ -11,7 +11,7 @@ import Customdiv from "./Customdiv";
 import HP from "../assets/Images/HP.jpg";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Avatar } from "primereact/avatar";
-import { Menu } from "primereact/menu";
+import { PanelMenu } from "primereact/panelmenu";
 
 const Homepage = () => {
   const [data, setData] = useState();
@@ -24,6 +24,126 @@ const Homepage = () => {
         setData(res.data);
       });
   }, []);
+  const items = [
+    {
+      label: "File",
+      icon: "pi pi-fw pi-file",
+      items: [
+        {
+          label: "New",
+          icon: "pi pi-fw pi-plus",
+          items: [
+            {
+              label: "Bookmark",
+              icon: "pi pi-fw pi-bookmark",
+            },
+            {
+              label: "Products",
+              icon: "pi pi-fw pi-image",
+            },
+          ],
+        },
+        {
+          label: "Delete",
+          icon: "pi pi-fw pi-trash",
+        },
+        {
+          label: "Export",
+          icon: "pi pi-fw pi-external-link",
+        },
+      ],
+    },
+    {
+      label: "Edit",
+      icon: "pi pi-fw pi-pencil",
+      items: [
+        {
+          label: "Left",
+          icon: "pi pi-fw pi-align-left",
+        },
+        {
+          label: "Right",
+          icon: "pi pi-fw pi-align-right",
+        },
+        {
+          label: "Center",
+          icon: "pi pi-fw pi-align-center",
+        },
+        {
+          label: "Justify",
+          icon: "pi pi-fw pi-align-justify",
+        },
+      ],
+    },
+    {
+      label: "Users",
+      icon: "pi pi-fw pi-user",
+      items: [
+        {
+          label: "New",
+          icon: "pi pi-fw pi-user-plus",
+        },
+        {
+          label: "Delete",
+          icon: "pi pi-fw pi-user-minus",
+        },
+        {
+          label: "Search",
+          icon: "pi pi-fw pi-users",
+          items: [
+            {
+              label: "Filter",
+              icon: "pi pi-fw pi-filter",
+              items: [
+                {
+                  label: "Print",
+                  icon: "pi pi-fw pi-print",
+                },
+              ],
+            },
+            {
+              icon: "pi pi-fw pi-bars",
+              label: "List",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Events",
+      icon: "pi pi-fw pi-calendar",
+      items: [
+        {
+          label: "New",
+          icon: "pi pi-fw pi-user-plus",
+        },
+        {
+          label: "Edit",
+          icon: "pi pi-fw pi-pencil",
+          items: [
+            {
+              label: "Save",
+              icon: "pi pi-fw pi-calendar-plus",
+            },
+            {
+              label: "Delete",
+              icon: "pi pi-fw pi-calendar-minus",
+            },
+          ],
+        },
+        {
+          label: "Archive",
+          icon: "pi pi-fw pi-calendar-times",
+          items: [
+            {
+              label: "Remove",
+              icon: "pi pi-fw pi-calendar-minus",
+            },
+          ],
+        },
+      ],
+    },
+  ];
   return (
     <div className="flex flex-col bg-slate-500 w-full h-full">
       <div className="flex flex-rows w-full h-9 ">
@@ -65,7 +185,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="flex border border-black h-screen w-full flex-row">
-        <div className="flex h-screen w-56 border border-red-900 flex-col items-center text-xl font-bold ">
+        <div className="flex h-screen w-64 border border-red-900 flex-col items-center text-xl font-bold ">
           <button className="w-full p-link flex items-center ">
             <Avatar
               image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png"
@@ -77,30 +197,9 @@ const Homepage = () => {
               <span className="text-sm">Agent</span>
             </div>
           </button>
-          <span className="pi pi-bookmark-fill hover:cursor-pointer mt-8 font-bold">
-            Bookmark
-          </span>
-          <span className="pi pi-cog hover:cursor-pointer mt-10 font-bold">
-            Settings
-          </span>
-          <span className="pi pi-fw pi-pencil hover:cursor-pointer mt-10 font-bold">
-            Edit
-          </span>
-          <span className="pi pi-qrcode hover:cursor-pointer mt-11 font-bold">
-            Scan Code
-          </span>
-          <span
-            className="pi pi-user hover:cursor-pointer mt-10 font-bold"
-            onClick={() => navigate("/Aboutus")}
-          >
-            About us
-          </span>
-          <span
-            className="pi pi-fw pi-power-off hover:cursor-pointer mt-12 font-bold"
-            onClick={() => navigate("/Login")}
-          >
-            Quit
-          </span>
+          <div className="card flex justify-content-center">
+            <PanelMenu model={items} className="w-full " />
+          </div>
         </div>
         <div className="flex flex-col h-screen w-full  items-center">
           <div className="flex flex-row">

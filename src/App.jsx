@@ -8,6 +8,7 @@ import Detailpage from "./Components/Detailpage";
 import Customdiv from "./Components/Customdiv";
 import Login from "./Components/Login";
 import Aboutus from "./Components/Aboutus";
+import Signup from "./Components/Signup";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Signup" element={<Signup/>}/>
           <Route path="/Firstpage" element={<Firstpage />} />
           <Route path="/Homepage" element={<Homepage />} />
           <Route path="/Customdiv" element={<Customdiv />} />

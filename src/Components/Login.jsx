@@ -36,8 +36,18 @@ const Login = () => {
               toggleMask
             />
           </div>
+          <div className="flex flex-row h-6 w-full  font-bold text-xs justify-center">
+            <div className="flex w-4/6 h-full  ">
+              <h6>Have an Account?</h6>
+            </div>
+            <div className="flex w-full h-full text-blue-600  justify-center">
+              <button className="flex " onClick={() => navigate("/Signup")}>
+                <h6>Click to Create An Account</h6>
+              </button>
+            </div>
+          </div>
           <div className="flex mt-4 w-full h-14 items-center justify-center ">
-            <Button label="Sign in" onClick={() => navigate("/Firstpage")} />
+            <Button label="Login" onClick={() => navigate("/Firstpage")} />
           </div>
         </div>
       </div>
