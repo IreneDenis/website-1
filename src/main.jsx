@@ -7,16 +7,19 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 //core
 import "primereact/resources/primereact.min.css";
 import { MantineProvider } from "@mantine/core";
-// import { BrowserRouter } from "react-router-dom";
+// import Customdiv from "./Components/Customdiv";
+import { BrowserRouter } from "react-router-dom";
+// import Homepage from "./Components/Homepage";
 import App from "./App";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    
-    <PrimeReactProvider>
+    <BrowserRouter> <PrimeReactProvider>
       <MantineProvider withGlobalStyles withNormalizeCSS>
         <App />
       </MantineProvider>
-    </PrimeReactProvider>
+    </PrimeReactProvider></BrowserRouter>
+   
     
   </React.StrictMode>
 );

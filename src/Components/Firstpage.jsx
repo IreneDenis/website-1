@@ -48,22 +48,24 @@ const Firstpage = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-col absolute bottom-16 items-center ">
-            <Text className="flex text-6xl font-bold">Welcome!</Text>
+          <div className="flex flex-col absolute top-16 items-start w-full h-48">
+            <Text className="flex text-9xl font-bold ml-14">Welcome!</Text>
 
-            <Text className="flex text-sm">
+            <Text className="flex text-lg ml-28">
               We provide the best service around the world
             </Text>
           </div>
 
-          <div>
-            <button
-              className="flex underline font-bold text-sm  items-center mb-8 mt-5"
-              onClick={() => navigate("/Login")}
-            >
-              Back to Login
-            </button>
+          <div className="flex flex-row mt-48 items-center justify w-96 ml-28">
             <div className="flex items-end flex-col h-full ">
+              <button
+                className="flex underline font-bold text-lg  items-center mb-8 mt-5"
+                onClick={() => navigate("/Login")}
+              >
+                Back to Login
+              </button>
+            </div>
+            <div className="flex items-end flex-col h-full ml-10 ">
               <button
                 className="flex underline font-bold text-lg  items-center mb-8 mt-4 "
                 onClick={() => navigate("/Homepage")}

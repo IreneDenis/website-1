@@ -18,7 +18,7 @@ const Homepage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://192.168.150.152:3333/products/retrieve-products")
+      .get("http://192.168.150.151:3000/products/retrieve-products")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -145,7 +145,7 @@ const Homepage = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-slate-500 w-full h-full">
+    <div className="flex flex-col bg-orange-300 w-full h-full">
       <div className="flex flex-rows w-full h-9 ">
         <div className="flex justify-start items-center w-1/3 font-bold">
           <h3>+25563 565 8576</h3>
@@ -184,8 +184,8 @@ const Homepage = () => {
           </a>
         </div>
       </div>
-      <div className="flex border border-black h-screen w-full flex-row">
-        <div className="flex h-screen w-64 border border-red-900 flex-col items-center text-xl font-bold ">
+      <div className="flex  h-screen w-full flex-row">
+        <div className="flex h-full w-72 flex-col items-center text-xl font-bold bg-white border-8 border-orange-300 ">
           <button className="w-full p-link flex items-center ">
             <Avatar
               image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png"
@@ -202,7 +202,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className="flex flex-col h-screen w-full  items-center">
-          <div className="flex flex-row">
+          <div className="flex flex-row  w-full">
             <div className="flex w-2/4 h-96 ">
               <img className="flex h-full w-full" src={HP2} alt="" />
             </div>
@@ -210,7 +210,7 @@ const Homepage = () => {
               <img className="flex h-full w-full" src={HP} alt="" />
             </div>
           </div>
-          <div className=" w-full h-screen border border-blue-950 justify-center grid grid-cols-1 sm:grid-cols-1 bg-slate-500 md:grid-col-1 lg:grid-cols-1 xl:grid-cols-1 2xl:grid-cols-1 ">
+          <div className=" w-full h-screen justify-center grid grid-cols-1 sm:grid-cols-1 bg-slate-500 md:grid-col-1 lg:grid-cols-1 xl:grid-cols-1 2xl:grid-cols-1 ">
             <h2 className="flex underline justify-center font-bold">
               List of products
             </h2>

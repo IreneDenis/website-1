@@ -5,34 +5,41 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Customdiv = (props) => {
-  const  data  = props;
+  const data = props;
   const navigate = useNavigate();
   const [value, setValue] = useState("");
+  console.log(data.data.productUrl[0]);
 
   return (
-    <div className="flex bg-white w-full h-full justify-center items-center ">
-      <div className="flex bg-slate-500 w-3/6 h-56 flex-row ">
-        <div className="flex border border-black h-full w-2/5 hover:cursor-pointer">
-          <a href={`/Detailpage/${data.id}`}>
-            <img src={data.productUrl[0]} alt="pc" />
+    <div className="flex bg-orange-200 w-full h-full justify-center items-center ">
+      <div className="flex bg-slate-500 w-3/6 h-56 flex-row mt-5 rounded-3xl ">
+        <div className="flex  h-full w-2/5 hover:cursor-pointer bg-white ">
+          <a href={`/Detailpage/${data.data.id}`}>
+            <img
+              className="flex w-full h-full"
+              src={data.data.productUrl[0]}
+              alt="pc"
+            />
           </a>
         </div>
-        <div className="flex flex-col h-full w-full">
-          <div className="flex w-full h-14 border border-red-900">
-            {data?.title}
+        <div className="flex flex-col h-full w-full ml-4">
+          <div className="flex w-full h-14  text-2xl font-bold">
+            {data?.data.title}
           </div>
-          <div className="flex w-full h-14 border border-green-950">
-            price:Tsh{data?.price}
+          <div className="flex w-full h-14  text-lg">
+            price:Tsh {data?.data.price}
           </div>
-          <div className="flex w-full h-14 border border-black">
+          <div className="flex w-full h-14 ">
             <Rating value={value} onChange={(e) => setValue(e.value)} />
           </div>
-          <button
-            className="flex items-center bg-green-950 text-white animate-pulse rounded-xl w-full h-14"
-            onClick={() => navigate()}
-          >
-            Add to Cart
-          </button>
+          <div className="flex items-center justify-center">
+            <button
+              className="flex items-center bg-slate-800 text-white animate-pulse rounded-xl w-40 h-14 justify-center"
+              onClick={() => navigate()}
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>
