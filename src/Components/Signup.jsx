@@ -25,6 +25,7 @@ const Signup = () => {
               <h2 className="flex font-bold text-center text-lg">
                 NAPPY SHOPPING CENTRE
               </h2>
+              <h4 className="flex font-bold">Signup Here</h4>
             </div>
             <div className="flex h-24 w-full flex-col justify-center items-center">
               <span className="p-float-label mt-0.1">

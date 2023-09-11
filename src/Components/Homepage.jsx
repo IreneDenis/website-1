@@ -160,7 +160,7 @@ const Homepage = () => {
       <div className="flex flex-row w-full h-24  bg-white">
         <div className="flex w-2/3 ">
           <img src={logo} alt="" />
-          <h1 className="flex justify-center items-center font-bold  text-slate-500 text-3xl ">
+          <h1 className="flex justify-center items-center font-bold  text-slate-800 text-3xl ">
             NAPPY SHOPPING CENTRE
           </h1>
         </div>
@@ -210,7 +210,7 @@ const Homepage = () => {
               <img className="flex h-full w-full" src={HP} alt="" />
             </div>
           </div>
-          <div className=" w-full h-screen justify-center grid grid-cols-1 sm:grid-cols-1 bg-slate-500 md:grid-col-1 lg:grid-cols-1 xl:grid-cols-1 2xl:grid-cols-1 ">
+          <div className=" w-full h-screen justify-center grid grid-cols-1 sm:grid-cols-1 bg-orange-300 md:grid-col-1 lg:grid-cols-1 xl:grid-cols-1 2xl:grid-cols-1 ">
             <h2 className="flex underline justify-center font-bold">
               List of products
             </h2>

@@ -12,7 +12,7 @@ const Customdiv = (props) => {
 
   return (
     <div className="flex bg-orange-200 w-full h-full justify-center items-center ">
-      <div className="flex bg-slate-500 w-3/6 h-56 flex-row mt-5 rounded-3xl ">
+      <div className="flex bg-yellow-800 w-4/6 h-56 flex-row mt-5 rounded-3xl ">
         <div className="flex  h-full w-2/5 hover:cursor-pointer bg-white ">
           <a href={`/Detailpage/${data.data.id}`}>
             <img

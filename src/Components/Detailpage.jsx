@@ -32,7 +32,7 @@ const Detailpage = () => {
   };
 
   return (
-    <div className="flex flex-col bg-slate-800 w-full h-screen">
+    <div className="flex flex-col bg-orange-300 w-full h-screen">
       <div className="flex flex-rows w-full h-9 ">
         <div className="flex justify-start items-center w-1/3 font-bold">
           <h3>+25563 565 8576</h3>
@@ -47,8 +47,8 @@ const Detailpage = () => {
       <div className="flex flex-row w-full h-24  bg-white">
         <div className="flex w-2/3 ">
           <img src={logo} alt="" />
-          <h1 className="flex justify-center items-center font-bold  text-slate-500 text-3xl ">
-            SHOPPING CENTRE
+          <h1 className="flex justify-center items-center font-bold  text-slate-700 text-3xl ">
+            NAPPY SHOPPING CENTRE
           </h1>
         </div>
         <div className="flex items-center font-bold w-2/6 border ">
@@ -79,12 +79,12 @@ const Detailpage = () => {
             className="flex w-full h-full"
           />
         </div>
-        <div className="flex flex-col w-full h-full bg-slate-800 ">
-          <div className="flex w-full h-44 bg-slate-500 font-bold font-sans text-5xl ">
+        <div className="flex flex-col w-full h-full bg-slate-800 border border-black ">
+          <div className="flex w-full h-44 bg-yellow-800 font-bold font-sans text-5xl ">
             {" "}
             {data?.title}
           </div>
-          <div className="flex w-full h-28 bg-slate-500 font-bold font-sans flex-row  ">
+          <div className="flex w-full h-28 bg-yellow-800 font-bold font-sans flex-row  ">
             <div className="flex h-full  w-3/6 items-center">
               Rating:
               <Rating value={value} onChange={(e) => setValue(e.value)} />
@@ -93,13 +93,13 @@ const Detailpage = () => {
               Price: Tsh.{data?.price}
             </div>
           </div>
-          <div className="flex w-full h-32 bg-slate-500 font-bold font-sans items-center justify-between flex-row">
+          <div className="flex w-full h-32 bg-yellow-800 font-bold font-sans items-center justify-between flex-row">
             <div className="flex ">Get a discount of {data?.discount}%</div>
             <div className="flex mr-4">
               Stocks Remain: {data?.productInStock}
             </div>
           </div>
-          <div className="flex w-full h-52 bg-slate-500 flex-row">
+          <div className="flex w-full h-52 bg-yellow-800 flex-row">
             <div className="flex w-full justify-end items-center">
               <button
                 className="bg-slate-800 h-10 w-9 border border-black rounded-xl"
@@ -122,7 +122,7 @@ const Detailpage = () => {
               </button>
             </div>
           </div>
-          <div className="flex w-full h-52 bg-slate-500 flex-row ">
+          <div className="flex w-full h-52 bg-yellow-800 flex-row ">
             <div className="flex text-black w-full justify-center items-center">
               <button className="bg-slate-800 h-10 w-32 border border-black rounded-xl">
                 Buy Now
@@ -136,7 +136,7 @@ const Detailpage = () => {
           </div>
         </div>
       </div>
-      <div className="h-full mt-5 grid grid-cols-2 gap-5 w-auto sm:grid-cols-2 bg-slate-500 md:grid-col-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 ">
+      <div className="h-full mt-5 grid grid-cols-2 gap-5 w-auto sm:grid-cols-2 bg-orange-200 md:grid-col-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 ">
         {data?.productUrl.map((data, index) => {
           return <Smalldiv key={index} data={data} />;
         })}
